@@ -1,5 +1,5 @@
 {
-  "name": "vue-project",
+  "name": "starter-h5",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^11.1.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "lib-flexible": "^0.3.2",
@@ -20,7 +21,9 @@
     "qs": "^6.12.3",
     "sass": "^1.77.8",
     "vant": "^4.9.3",
-    "vue": "^3.4.29"
+    "vite-plugin-vue-devtools": "^7.5.3",
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
@@ -37,7 +40,11 @@
     "postcss-pxtorem": "^6.1.0",
     "prettier": "^3.2.5",
     "typescript": "~5.4.0",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-router": "^0.10.8",
     "vite": "^5.3.1",
+    "vite-plugin-pages": "^0.32.3",
+    "vite-plugin-vue-layouts": "^0.11.0",
     "vue-tsc": "^2.0.21"
   }
 }
