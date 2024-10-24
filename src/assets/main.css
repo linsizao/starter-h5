@@ -1,0 +1,6 @@
+@import './base.css';
+
+#app {
+  padding: 20px;
+  background: #050110;
+}
