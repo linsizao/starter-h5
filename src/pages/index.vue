@@ -1,7 +1,18 @@
 <script setup lang="ts">
+  import { getTodos } from '@/request/apis/user'
   defineOptions({
     name: 'IndexPage'
   })
+
+  const formatted = useDateFormat(useNow(), 'YYYY-MM-DD HH:mm:ss')
+  console.log('formatted', formatted.value)
+
+  const fetchData = async () => {
+    const data = await getTodos()
+    console.log('data', data)
+  }
+
+  fetchData()
 </script>
 
 <template>

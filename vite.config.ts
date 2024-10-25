@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// import Components from 'unplugin-vue-components/vite'
+import Components from 'unplugin-vue-components/dist/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
@@ -30,6 +30,7 @@ export default defineConfig({
         'vue',
         'vue-router',
         '@vueuse/core',
+        '@vueuse/head',
         VueRouterAutoImports,
         {
           // add any other imports you were relying on
@@ -41,9 +42,19 @@ export default defineConfig({
       vueTemplate: true
     }),
 
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      // allow auto load markdown components under `./src/components/`
+      extensions: ['vue', 'md'],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: 'src/components.d.ts'
+    }),
+
     UnoCSS({
       presets: [presetUno(), presetAttributify(), presetIcons()]
     }),
+
     vue(),
 
     VueDevTools()
@@ -54,8 +65,8 @@ export default defineConfig({
     }
   },
   server: {
-    host: true, // 监听所有地址，包括局域网和公网地址
-    port: 3000, // 指定端口，可以根据需要更改
+    host: true,
+    port: 3000,
     proxy: {
       '/api': {
         // 免费的在线REST API
