@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -7,6 +6,8 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import UnoCSS from 'unocss/vite'
+import { presetUno, presetAttributify, presetIcons } from 'unocss'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
@@ -39,6 +40,9 @@ export default defineConfig({
       vueTemplate: true
     }),
 
+    UnoCSS({
+      presets: [presetUno(), presetAttributify(), presetIcons()]
+    }),
     vue(),
 
     VueDevTools()

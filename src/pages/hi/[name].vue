@@ -10,7 +10,9 @@
   })
 </script>
 
-<template>hi: {{ route.params.name }}</template>
+<template>
+  <div>hi: {{ route.params.name }}</div>
+</template>
 
 <route lang="yaml">
 meta:
