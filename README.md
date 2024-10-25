@@ -11,16 +11,13 @@
 - 🍍 [使用 Pinia 的状态管理](https://pinia.esm.dev/) - 直观简单的状态管理
 - 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 - 😃 [各种图标集为你所用](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-- 🌍 [I18n 国际化开箱即用](https://github.com/intlify/vue-i18n-next)
-- 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
-- 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 等,无需导入
 - 🦾 [TypeScript](https://www.typescriptlang.org/), 提供强大的类型检查和智能提示,增强代码的可靠性和开发效率
 
 ## 预配置
 
 ### UI 框架
 
-- [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
+- [Vant](https://vant-ui.github.io/vant/) - 轻量、可靠的移动端 Vue 组件库
 
 ### Icons
 
@@ -36,6 +33,8 @@
 - [`unplugin-vue-macros`](https://github.com/sxzz/unplugin-vue-macros) - 探索并扩展更多的宏和语法糖到 Vue
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
 - [`vite-plugin-vue-devtools`](https://github.com/webfansplz/vite-plugin-vue-devtools) - 旨在增强Vue开发者体验的Vite插件
+- [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - 基于文件系统的路由生成
+- [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - 页面布局系统
 
 ### 编码风格
 
