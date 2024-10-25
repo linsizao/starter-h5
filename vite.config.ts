@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+// import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
@@ -53,7 +54,8 @@ export default defineConfig({
     }
   },
   server: {
-    port: 9527,
+    host: true, // 监听所有地址，包括局域网和公网地址
+    port: 3000, // 指定端口，可以根据需要更改
     proxy: {
       '/api': {
         // 免费的在线REST API

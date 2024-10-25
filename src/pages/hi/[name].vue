@@ -1,4 +1,8 @@
 <script setup lang="ts">
+  defineOptions({
+    name: 'HiPage'
+  })
+
   const route = useRoute('/hi/[name]')
 
   console.log('route.params.name', route.params.name)

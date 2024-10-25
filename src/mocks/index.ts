@@ -34,7 +34,7 @@ function getRandomTwoElements(arr: string[]) {
   }
 
   // 生成两个不重复的随机索引
-  let index1 = Math.floor(Math.random() * arr.length)
+  const index1 = Math.floor(Math.random() * arr.length)
   let index2
   do {
     index2 = Math.floor(Math.random() * arr.length)

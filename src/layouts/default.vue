@@ -1,3 +1,9 @@
+<script setup lang="ts">
+  defineOptions({
+    name: 'DefaultLayout'
+  })
+</script>
+
 <template>
   <main
     px-4
@@ -8,7 +14,6 @@
     flex-items-center
   >
     <RouterView />
-    <TheFooter />
     <div mx-auto mt-5 text-center text-sm opacity-50>[Default Layout]</div>
   </main>
 </template>
